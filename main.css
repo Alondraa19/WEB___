@@ -1,0 +1,134 @@
+.product-card {
+    transition: transform 0.3s;
+    margin-bottom: 20px;
+}
+.product-card:hover {
+    transform: translateY(-20px);
+}
+
+.navbar-custom {
+    background-color: #f8f9fa;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.card-body-categoria {
+    background-color: #1c81d3;
+    transition: all 0.3s ease;
+    color: white;   
+    /*border-radius: 8px 8px 8px 8px;*/
+}
+
+.card-body-categoria:hover {
+    background-color: #010508;
+}
+
+footer {
+    background-color: #f8f9fa;
+    padding: 20px 0;
+}
+
+.btn-primary:hover {
+    background-color: #010508;
+}
+
+#chat-toggle {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #0d6efd;
+    border: none;
+    color: white;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    font-size: 24px;
+    cursor: pointer;
+    z-index: 1050;
+}
+
+#chat-container {
+    position: fixed;
+    bottom: 80px;
+    right: 20px;
+    height: 500px;
+    width: 320px;
+    max-height: 400px;
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 0 12px rgba(0,0,0,0.2);
+    display: none;
+    flex-direction: column;
+    font-family: Arial, sans-serif;
+    z-index: 1051;
+}
+
+#chat-header {
+    background-color: #0d6efd;
+    color: white;
+    padding: 10px;
+    font-weight: bold;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#chat-close {
+    cursor: pointer;
+    font-size: 30px;
+}
+
+#chatbox {
+    flex: 1;
+    padding: 10px;
+    overflow-y: auto;
+    background: #f9f9f9;
+    border-bottom: 1px solid #ddd;
+}
+
+#chatbox .user {
+    color: blue;
+    margin-top: 5px;
+    text-align: right;
+}
+
+#chatbox .bot {
+    color: green;
+    margin-top: 5px;
+    text-align: left;
+}
+
+#userInput {
+    width: calc(100% - 90px);
+    height: 40px;
+    padding: 8px;
+    border: none;
+    border-top: 1px solid #ddd;
+    outline: none;
+    font-size: 14px;
+}
+
+#sendBtn {
+    width: 70px;
+    height: 40px;
+    border: none;
+    background-color: #0d6efd;
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 14px;
+    border-top: 1px solid #0a58ca;
+}
+
+/* 🔥 Efecto de elevación al pasar el mouse por cualquier tarjeta */
+.card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+}

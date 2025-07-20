@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Procesando Detalle del Pedido</title>
+</head>
+<body>
+  <script>
+    const carrito = JSON.parse(localStorage.getItem("carrito")) || [];
+    if (carrito.length === 0) {
+      alert("❌ No hay productos en el carrito.");
+      window.location.href = "main.html";
+    } else {
+  
+      fetch("../PHP/guardar_detalle.php", { 
+  method: "POST",
+  headers: { "Content-Type": "application/json" },
+  body: JSON.stringify({ carrito })
+})
+.then(res => res.json())
+.then(data => {
+  if (data.success) {
+
+    localStorage.removeItem("carrito");
+    localStorage.removeItem("datosIdentificacion");
+    localStorage.removeItem("datosEnvio");
+    window.location.href = "confirmacion.html";
+  } else {
+    alert("❌ Error del servidor: " + data.error);
+    console.error(data);
+  }
+})
+.catch(err => {
+  alert("❌ Error al conectar con el servidor: " + err);
+  console.error(err);
+});
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="login.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">    
+    <title>Login/Register</title>
+</head>
+<body>
+    <section>
+        <div class="form-box">
+
+            <!-- FORMULARIO DE LOGIN -->
+            <div class="form-value" id="login-form">
+                <form action="../PHP/login.php" method="POST">
+                    <h2>Login</h2>
+                    <div class="inputbox">
+                        <ion-icon name="mail-outline"></ion-icon>
+                        <input type="email" name="email" id="login-email" required>
+                        <label for="login-email">Email</label>
+                    </div>
+                    <div class="inputbox">
+                        <ion-icon name="lock-closed-outline"></ion-icon>
+                        <input type="password" name="contraseña" id="login-password" required>
+                        <label for="login-password">Password</label>
+                    </div>
+                    <div class="forget">
+                        <label><input type="checkbox">Remember Me <a href="#">Forget Password</a></label>                        
+                    </div>
+                    <button type="submit">Log in</button>
+                    <div class="register">
+                        <p>No tienes una cuenta? <a onclick="showRegister()">Regístrate</a></p>
+                    </div>
+                </form>
+            </div>
+
+            <!-- FORMULARIO DE REGISTRO -->
+            <div class="form-value" id="register-form" style="display: none;">
+                <form action="../PHP/registro_backend.php" method="POST">
+                    <h2>Register</h2>
+                    <div class="inputbox">
+                        <ion-icon name="person-outline"></ion-icon>
+                        <input type="text" name="nombre" id="register-username" required>
+                        <label for="register-username">Username</label>
+                    </div>
+                    <div class="inputbox">
+                        <ion-icon name="mail-outline"></ion-icon>
+                        <input type="email" name="email" id="register-email" required>
+                        <label for="register-email">Email</label>
+                    </div>
+                    <div class="inputbox">
+                        <ion-icon name="lock-closed-outline"></ion-icon>
+                        <input type="password" name="contraseña" id="register-password" required>
+                        <label for="register-password">Password</label>
+                    </div>
+                    <button type="submit">Register</button>
+                    <div class="register">
+                        <p>¿Ya tienes una cuenta? <a onclick="showLogin()">Inicia sesión</a></p>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Íconos -->
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script> 
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>    
+
+    <!-- Lógica JS -->
+    <script src="login.js"></script>
+    <div id="message-box" class="hidden"></div>
+</body>
+</html>

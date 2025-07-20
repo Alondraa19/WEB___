@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homely - Implementos para el Hogar</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+</head>
+
+<body>
+    <header class="bg-light py-4">
+        <div class="container">
+            <h1 class="display-4">Homely</h1>
+            <p class="lead"><i>Todo lo que necesitas para tu hogar en un solo lugar</i></p>
+        </div>
+    </header>
+
+    <nav class="navbar navbar-expand-lg navbar-light navbar-custom mb-4">
+        <div class="container">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#inicio">Inicio</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-bs-toggle="dropdown">
+                            Categorías
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#Electrodomestico">Electrodomésticos</a></li>
+                            <li><a class="dropdown-item" href="#Dormitorio">Dormitorio</a></li>
+                            <li><a class="dropdown-item" href="#Baño">Baño</a></li>
+                            <li><a class="dropdown-item" href="#Terraza">Terraza</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#productos">Productos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#ofertas">Ofertas</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contacto">Contacto</a>
+                    </li>
+                </ul>
+                <div class="ms-auto d-flex align-items-center">
+                    <a href="carrito.html" class="btn btn-outline-primary position-relative me-3">
+                        <i class="bi bi-cart4"></i> Carrito
+                        <span id="contadorCarrito"
+                            class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                            0
+                        </span>
+                    </a>
+                    <a href="login.html" class="btn btn-outline-danger">
+                        <i class="bi bi-box-arrow-right"></i> Cerrar Sesión
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container">
+        <section id="productos" class="mb-5">
+            <h2 class="mb-4"><i class="bi bi-cart3"></i> Nuestros Productos Destacados</h2>
+
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <a href="detalle_producto.html?nombre=Juego%20de%20Toallas&imagen=../../recursos/imagenes/Productos_juego_de_toallas&descripcion=Suaves%20y%20absorbentes%20toallas%20para%20tu%20baño.&precio=29.99&id=1"
+                        class="text-decoration-none text-dark">
+                        <div class="card product-card h-100">
+                            <img src="../../recursos/imagenes/Productos_juego_de_toallas" class="card-img-top"
+                                alt="Juego de toallas de baño" height="410px">
+                            <div class="card-body">
+                                <h3 class="card-title h5">Juego de Toallas</h3>
+                                <p class="card-text"><b>Descripción:</b> Suaves y absorbentes toallas para tu baño.</p>
+                                <p class="card-text"><b>Precio:</b> <span class="badge bg-success">S/.29.99</span></p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="col-md-4 mb-4">
+                    <a href="detalle_producto.html?nombre=Mesa%20de%20Terraza&imagen=../../recursos/imagenes/Productos_mesa_terraza&descripcion=Resistente%20mesa%20para%20disfrutar%20del%20aire%20libre.&precio=199.99&id=2"
+                        class="text-decoration-none text-dark">
+                        <div class="card product-card h-100">
+                            <img src="../../recursos/imagenes/Productos_mesa_terraza" class="card-img-top"
+                                alt="Mesa para exterior">
+                            <div class="card-body">
+                                <h3 class="card-title h5">Mesa de Terraza</h3>
+                                <p class="card-text"><b>Descripción:</b> Resistente mesa para disfrutar del aire libre.
+                                </p>
+                                <p class="card-text"><b>Precio:</b> <span class="badge bg-success">S/.199.99</span></p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="col-md-4 mb-4">
+                    <a href="detalle_producto.html?nombre=Cortinas%20Modernas&imagen=../../recursos/imagenes/Productos_cortinas_modernas&descripcion=Elegantes%20cortinas%20para%20todas%20tus%20habitaciones.&precio=49.99&id=3"
+                        class="text-decoration-none text-dark">
+                        <div class="card product-card h-100">
+                            <img src="../../recursos/imagenes/Productos_cortinas_modernas" class="card-img-top"
+                                alt="Cortinas elegantes">
+                            <div class="card-body">
+                                <h3 class="card-title h5">Cortinas Modernas</h3>
+                                <p class="card-text"><b>Descripción:</b> Elegantes cortinas para todas tus habitaciones.
+                                </p>
+                                <p class="card-text"><b>Precio:</b> <span class="badge bg-success">S/.49.99</span></p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <a href="detalle_producto.html?nombre=Licuadora&imagen=../../recursos/imagenes/Productos_licuadora.png&descripcion=Licuadora%20Oster%201.5L%20con%206%20Velocidades%20BLSTPEG%20GPB%20Gris&precio=249.99&id=4"
+                        class="text-decoration-none text-dark">
+                        <div class="card product-card h-100">
+                            <img src="../../recursos/imagenes/Productos_licuadora.png" class="card-img-top" alt="Licuadora"
+                                height="650px">
+                            <div class="card-body">
+                                <h3 class="card-title h5">Licuadora</h3>
+                                <p class="card-text"><b>Descripción:</b> Licuadora Oster 1.5L con 6 Velocidades BLSTPEG
+                                    GPB
+                                    Gris</p>
+                                <p class="card-text"><b>Precio:</b> <span class="badge bg-success">S/.249.99</span></p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="col-md-4 mb-4">
+                    <a href="detalle_producto.html?nombre=Horno%20Electrico&imagen=../../recursos/imagenes/Productos_HornoElectrico.png&descripcion=Horno%20Electrico%20100L%20Imaco%20HEB100R%20Gris&precio=729.00&id=5"
+                        class="text-decoration-none text-dark">
+                        <div class="card product-card h-100">
+                            <img src="../../recursos/imagenes/Productos_HornoElectrico.png" class="card-img-top"
+                                alt="Horno eléctrico" height="450px">
+                            <div class="card-body">
+                                <h3 class="card-title h5">Horno Electrico</h3>
+                                <p class="card-text"><b>Descripción:</b> Horno Electrico 100L Imaco HEB100R Gris</p>
+                                <p class="card-text"><b>Precio:</b> <span class="badge bg-success">S/.729.00</span></p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="col-md-4 mb-4">
+                    <a href="detalle_producto.html?nombre=Multi%20Olla&imagen=../../recursos/imagenes/Productos_MultiOlla.png&descripcion=14%20funciones%20en%201%20Manual,%20Vapor,%20Arroz/Granos,%20Carne,%20Aves,%20Sopa/Estofado,%20Frijoles/Porotos,%20Al%20Vacío,%20Cocción%20Lenta,%20Dorar/Saltear,%20Reducir,%20Postre,%20Mantener%20Caliente,%20Esterilizar&precio=499.99&id=6"
+                        class="text-decoration-none text-dark">
+                        <div class="card product-card h-100">
+                            <img src="../../recursos/imagenes/Productos_MultiOlla.png" class="card-img-top" alt="Multi olla"
+                                height="450px">
+                            <div class="card-body">
+                                <h3 class="card-title h5">Multi Olla</h3>
+                                <p class="card-text"><b>Descripción:</b> 14 funciones en 1 Manual, Vapor, Arroz/Granos,
+                                    Carne, Aves,
+                                    Sopa/Estofado, Frijoles/Porotos, Al Vacío, Cocción Lenta, Dorar/Saltear, Reducir,
+                                    Postre, Mantener Caliente, Esterilizar</p>
+                                <p class="card-text"><b>Precio:</b> <span class="badge bg-success">S/.499.99</span></p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section id="ofertas" class="mb-5">
+            <h2 class="mb-4"><i class="bi bi-tag"></i> Ofertas Especiales</h2>
+            <div class="table-responsive">
+                <table class="table table-striped table-hover">
+                    <thead class="table-light">
+                        <tr>
+                            <th>Producto</th>
+                            <th>Categoría</th>
+                            <th>Precio Regular</th>
+                            <th>Oferta</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Juego de Toallas</td>
+                            <td>Baño</td>
+                            <td>$39.99</td>
+                            <td><strong>$29.99</strong></td>
+                        </tr>
+                        <tr>
+                            <td>Mesa de Terraza</td>
+                            <td>Terraza</td>
+                            <td>$249.99</td>
+                            <td><strong>$199.99</strong></td>
+                        </tr>
+                        <tr>
+                            <td>Cortinas Modernas</td>
+                            <td>Dormitorio</td>
+                            <td>$59.99</td>
+                            <td><strong>$49.99</strong></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+
+
+        <section id="Baño" class="mb-5">
+    <h2 class="mb-4"><i class="bi bi-droplet"></i> Artículos de Baño</h2>
+    <div class="row">
+        <!-- Producto: Espejo -->
+        <div class="col-md-6">
+            <a href="detalle_producto.html?nombre=Espejo&imagen=../../recursos/imagenes/categoria_baño_espejo.webp&descripcion=Vidrio%20templado%20con%20marco%20de%20aluminio.&precio=89.99&id=11"
+                class="text-decoration-none text-dark">
+                <div class="card h-100">
+                    <img src="../../recursos/imagenes/categoria_baño_espejo.webp" class="card-img-top" alt="Espejo para baño moderno">
+                    <div class="card-body card-body-categoria">
+                        <h3 class="card-title h5">Espejo</h3>
+                        <p class="card-text"><b>Material:</b> Vidrio templado con marco de aluminio.</p>
+                        <p class="card-text"><b>Precio:</b> <span class="badge bg-success">S/.89.99</span></p>
+                    </div>
+                </div>
+            </a>
+        </div>
+
+        <!-- Producto: Lavadero -->
+        <div class="col-md-6">
+            <a href="detalle_producto.html?nombre=Lavadero&imagen=../../recursos/imagenes/categoria_baño_lavadero.webp&descripcion=Porcelana%20de%20alta%20resistencia.&precio=149.99&id=12"
+                class="text-decoration-none text-dark">
+                <div class="card h-100">
+                    <img src="../../recursos/imagenes/categoria_baño_lavadero.webp" class="card-img-top" alt="Lavadero de porcelana">
+                    <div class="card-body card-body-categoria">
+                        <h3 class="card-title h5">Lavadero</h3>
+                        <p class="card-text"><b>Material:</b> Porcelana de alta resistencia.</p>
+                        <p class="card-text"><b>Precio:</b> <span class="badge bg-success">S/.149.99</span></p>
+                    </div>
+                </div>
+            </a>
+        </div>
+    </div>
+</section>
+
+  <section id="Terraza" class="mb-5">
+    <h2 class="mb-4"><i class="bi bi-flower1"></i> Artículos de Terraza</h2>
+    <div class="row">
+        <!-- Sillas -->
+        <div class="col-md-6">
+            <a href="detalle_producto.html?nombre=Sillas%20para%20Terraza&imagen=../../recursos/imagenes/categoria_terraza_silla.webp&descripcion=Ratán%20sintético%20resistente%20a%20la%20intemperie.&precio=289.00&id=13"
+               class="text-decoration-none text-dark">
+                <div class="card h-100">
+                    <img src="../../recursos/imagenes/categoria_terraza_silla.webp" class="card-img-top"
+                         alt="Sillas para terraza">
+                    <div class="card-body card-body-categoria">
+                        <h3 class="card-title h5">Sillas</h3>
+                        <p class="card-text"><b>Material:</b> Ratán sintético resistente a la intemperie.</p>
+                    </div>
+                </div>
+            </a>
+        </div>
+
+        <!-- Silla Colgante -->
+        <div class="col-md-6">
+            <a href="detalle_producto.html?nombre=Silla%20Colgante&imagen=../../recursos/imagenes/categoria_terraza_sillacolgante&descripcion=Acero%20inoxidable%20con%20cojines%20incluidos.&precio=379.90&id=14"
+               class="text-decoration-none text-dark">
+                <div class="card h-100">
+                    <img src="../../recursos/imagenes/categoria_terraza_sillacolgante" class="card-img-top"
+                         alt="Silla colgante para exterior">
+                    <div class="card-body card-body-categoria">
+                        <h3 class="card-title h5">Silla Colgante</h3>
+                        <p class="card-text"><b>Material:</b> Acero inoxidable con cojines incluidos.</p>
+                    </div>
+                </div>
+            </a>
+        </div>
+    </div>
+</section>
+
+
+
+        <section id="Electrodomestico" class="mb-5">
+    <h2 class="mb-4"><i class="bi bi-lightning-charge"></i> Electrodomésticos</h2>
+    <div class="row">
+        <!-- Sandwichera -->
+        <div class="col-md-6">
+            <a href="detalle_producto.html?nombre=Sandwichera&imagen=../../recursos/imagenes/Categoria_sandwichera.png&descripcion=Anti%20adherente&precio=149.90&id=9"
+               class="text-decoration-none text-dark">
+                <div class="card h-90">
+                    <img src="../../recursos/imagenes/Categoria_sandwichera.png" class="card-img-top"
+                         alt="Sandwichera" height="650px">
+                    <div class="card-body card-body-categoria">
+                        <h3 class="card-title h5">Sandwichera</h3>
+                        <p class="card-text"><b>Material:</b> Anti adherente.</p>
+                    </div>
+                </div>
+            </a>
+        </div>
+
+        <!-- Hervidor -->
+        <div class="col-md-6">
+            <a href="detalle_producto.html?nombre=Hervidor&imagen=../../recursos/imagenes/Categoria_Hervidor.png&descripcion=Carcasa%20de%20polipropileno%20y%20acero%20inoxidable&precio=109.90&id=10"
+               class="text-decoration-none text-dark">
+                <div class="card h-100">
+                    <img src="../../recursos/imagenes/Categoria_Hervidor.png" class="card-img-top"
+                         alt="Hervidor" height="650px">
+                    <div class="card-body card-body-categoria">
+                        <h3 class="card-title h5">Hervidor</h3>
+                        <p class="card-text"><b>Material:</b> Carcasa de polipropileno y acero inoxidable.</p>
+                    </div>
+                </div>
+            </a>
+        </div>
+    </div>
+</section>
+
+
+        <section id="Dormitorio" class="mb-5">
+    <h2 class="mb-4"><i class="bi bi-lamp"></i> Dormitorio</h2>
+    <div class="row">
+        <!-- Colchón -->
+        <div class="col-md-6">
+            <a href="detalle_producto.html?nombre=Colchón&imagen=../../recursos/imagenes/Categoria_dormitorio_Colchon2plazas.png&descripcion=Tela%20tejido%20de%20punto%20de%20alta%20calidad,%20producidos%20con%20suaves%20fibras%20textiles.&precio=799.00&id=11"
+               class="text-decoration-none text-dark">
+                <div class="card h-90">
+                    <img src="../../recursos/imagenes/Categoria_dormitorio_Colchon2plazas.png" class="card-img-top"
+                         alt="Colchón" height="650px">
+                    <div class="card-body card-body-categoria">
+                        <h3 class="card-title h5">Colchón</h3>
+                        <p class="card-text"><b>Material:</b> Tela tejido de punto de alta calidad, producidos con suaves fibras textiles.</p>
+                    </div>
+                </div>
+            </a>
+        </div>
+
+        <!-- Lámpara -->
+        <div class="col-md-6">
+            <a href="detalle_producto.html?nombre=Lámpara&imagen=../../recursos/imagenes/Categoria_dormitorio_Lampara.png&descripcion=Madera%20maciza%20con%20pantalla&precio=129.90&id=12"
+               class="text-decoration-none text-dark">
+                <div class="card h-100">
+                    <img src="../../recursos/imagenes/Categoria_dormitorio_Lampara.png" class="card-img-top"
+                         alt="Lámpara" height="650px">
+                    <div class="card-body card-body-categoria">
+                        <h3 class="card-title h5">Lámpara</h3>
+                        <p class="card-text"><b>Material:</b> Madera maciza con pantalla.</p>
+                    </div>
+                </div>
+            </a>
+        </div>
+    </div>
+</section>
+
+
+            <section id="contacto" class="mb-5">
+                <h2 class="mb-4"><i class="bi bi-envelope"></i> Contáctenos</h2>
+                <div class="row">
+                    <div class="col-md-8 mx-auto">
+                        <form action="#" method="post">
+                            <div class="mb-3">
+                                <label for="nombre" class="form-label">Nombre:</label>
+                                <input type="text" class="form-control" id="nombre" name="nombre" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="email" class="form-label">Email:</label>
+                                <input type="email" class="form-control" id="email" name="email" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="telefono" class="form-label">Teléfono:</label>
+                                <input type="tel" class="form-control" id="telefono" name="telefono">
+                            </div>
+                            <div class="mb-3">
+                                <label for="categoria" class="form-label">Categoría de interés:</label>
+                                <select class="form-select" id="categoria" name="categoria">
+                                    <option selected value="">-- Seleccione --</option>
+                                    <option value="Electrodomestico">Electrodomésticos</option>
+                                    <option value="Dormitorio">Dormitorio</option>
+                                    <option value="Baño">Baño</option>
+                                    <option value="Terraza">Terraza</option>
+                                </select>
+                            </div>
+                            <div class="mb-3">
+                                <label for="mensaje" class="form-label">Mensaje:</label>
+                                <textarea class="form-control" id="mensaje" name="mensaje" rows="5" required></textarea>
+                            </div>
+                            <div class="d-grid gap-2 d-md-block">
+                                <button type="submit" class="btn btn-primary">Enviar Consulta</button>
+                                <button type="reset" class="btn btn-outline-secondary">Limpiar Formulario</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </section>
+    </main>
+
+    <footer class="mt-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <h3>Información de Contacto</h3>
+                    <p><b>Dirección:</b> Av. Olaya, Local 123, Ciudad</p>
+                    <p><b>Teléfono:</b> 964530729</p>
+                    <p><b>Email:</b> Homely@gmail.com</p>
+                </div>
+                <div class="col-md-4">
+                    <h3>Horario</h3>
+                    <p>Lunes a Viernes 9:00 am - 18:00 pm</p>
+                    <p>Sábados 10:00 am - 14:00 pm</p>
+                </div>
+                <div class="col-md-4">
+                    <h3>Síguenos</h3>
+                    <a href="#" class="btn btn-outline-dark me-2"><i class="bi bi-facebook"></i></a>
+                    <a href="#" class="btn btn-outline-dark me-2"><i class="bi bi-instagram"></i></a>
+                    <a href="#" class="btn btn-outline-dark me-2"><i class="bi bi-twitter"></i></a>
+                </div>
+            </div>
+            <hr>
+            <p class="text-center"><small>© 2023 Homely - Todos los derechos reservados</small></p>
+        </div>
+    </footer>
+
+    <!-- Chatbox -->
+    <div id="chat-container">
+        <div id="chat-header">Homely Chat <span id="chat-close" title="Cerrar">&times;</span></div>
+        <div id="chatbox"></div>
+        <input type="text" id="userInput" placeholder="Escribe tu pregunta..." autocomplete="off" />
+        <button id="sendBtn">Enviar</button>
+    </div>
+
+    <!-- Botón para abrir chat -->
+    <button id="chat-toggle" title="Abrir chat">💬</button>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="main.js"></script>
+
+</body>
+
+</html>
